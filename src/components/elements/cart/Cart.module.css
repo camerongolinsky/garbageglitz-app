@@ -1,0 +1,16 @@
+.cartCardContainer {
+  border: 2px solid black;
+  padding: 10px;
+}
+
+.cartCardContainer div {
+  margin-bottom: 10px;
+}
+
+.checkoutSection {
+  margin-top: 20px;
+}
+
+.checkoutSectionTotal {
+  font-size: 40px;
+}

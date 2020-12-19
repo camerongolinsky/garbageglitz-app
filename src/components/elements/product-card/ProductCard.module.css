@@ -1,0 +1,17 @@
+button {
+  font-family: 'Schoolbell', cursive;
+}
+
+.productCardContainer {
+  box-shadow: 5px 5px black;
+}
+
+.productCardBody {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 30px;
+  width: 300px;
+}
+
+.productCardButton {
+}

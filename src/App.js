@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import "./App.css";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import { addProducts } from "./redux/slices/productsSlice";
+import { useDispatch } from "react-redux";
+import { PRODUCTS } from "./products";
+import Header from "./components/layout/header/Header";
+import ShoppingCart from "./components/pages/ShoppingCart";
+import Products from "./components/pages/Products";
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(addProducts(PRODUCTS));
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Router>
+        <Header />
+        <Route exact path="/" component={Products} />
+        <Route path="/cart" component={ShoppingCart} />
+      </Router>
     </div>
   );
 }

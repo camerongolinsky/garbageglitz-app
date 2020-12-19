@@ -1,0 +1,53 @@
+.header {
+  font-family: "Schoolbell", cursive;
+  font-size: 24px;
+}
+
+nav ul {
+  background-color: #a3a6ac;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+
+nav ul li a {
+  color: #373131;
+  display: block;
+  padding: 0.8rem 1rem;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+@media only screen and (min-width: 415px) {
+  nav ul {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  nav ul li {
+    flex: 1 0 auto;
+    text-align: center;
+  }
+}
+
+/* Hamburger Menu */
+
+h1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.line {
+  width: 30px;
+  height: 3px;
+  background-color: black;
+  margin-bottom: 5px;
+}
+
+.hamburger{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
